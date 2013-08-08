@@ -10,22 +10,23 @@ var sendStatusMessage = function(found){
 };*/
 
 var findTarget = function() {
-  console.log("findTarget");
-  the_id = "#registerdiv a";
+  //console.log("findTarget");
+  the_id = "input";
+  /**
   if($("h1:contains('Server Error')")){
-    window.location = "http://reg13b.cloudapp.net";
-  }
+    window.location = "http://www.ticketfly.com/purchase/event/334353";
+  }*/
+  /**
   if($("h2:contains('404')")){
-    window.location = "http://reg13b.cloudapp.net";
-  }
-  if($(the_id).length){
-    console.log("found");
-    console.log($("#registerdiv a"))
-    //$(the_id).first().click();
-    window.location = $("#registerdiv a").first().href
+    window.location = "http://www.ticketfly.com/purchase/event/334353";
+  }*/
+  if(!$(the_id).length){
+    //console.log("found");
+    //window.location = $("#registerdiv a").first().href
+    window.location = "http://www.ticketfly.com/purchase/event/334353";
     //sendStatusMessage(true);
   }else{
-    console.log("not found");
+    $(the_id).val("beechtree");
     //sendStatusMessage(false);
   }
 };
