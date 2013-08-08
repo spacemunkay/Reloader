@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Reloader",
+  "version": "0.0.1",
+  "description": "Reload a page till it changes.",
+  "icons": {  "16": "icon.png" },
+  "background": {
+    "scripts": [
+      "lib/jquery-1.9.1.js",
+      "background_scripts/main.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/jquery-1.9.1.js",
+             "content_scripts/main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Reloader!"
+  }
+}
